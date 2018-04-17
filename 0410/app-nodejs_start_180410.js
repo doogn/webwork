@@ -50,7 +50,7 @@ app.get('/getAuthcode1or2', function(req, res) {
 });
 
 app.get('/getNameFromBoard', function(req, res) {
-  connection.query('select * from board',
+  connection.query('select name from member where id in (select id from board)',
     function(err, rows, fields) {
       if (err) throw err;
       res.send(rows);
@@ -59,7 +59,7 @@ app.get('/getNameFromBoard', function(req, res) {
 });
 
 app.get('/getEmailOfAdmin', function(req, res) {
-  connection.query('select * from member where authcode = (select authcode from auth where authority = "관리자")',
+  connection.query('select email from member where authcode = (select authcode from auth where authority = "관리자")',
     function(err, rows, fields) {
       if (err) throw err;
       res.send(rows);
