@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>웹 UI 시험</title>
+      <style media="screen">
+        #title {
+          text-align: center;
+          font-size: 50px;
+          color: blue;
+        }
+        #name {
+          font-family: Arial;
+          font-style: italic;
+          color: green;
+        }
+        #id {
+          font-weight: 900;
+          color: blue;
+        }
+        #password {
+          text-shadow: 7px -7px 5px black;
+        }
+        #retype {
+          text-shadow: 7px -7px 5px black;
+        }
+        #email {
+          letter-spacing: 0.8em;
+          color: hotpink;
+        }
+        #mobile {
+          background: lightblue;
+        }
+        #auth {
+          font-family: bold;
+          color:purple;
+        }
+        #submit {
+          text-align: center;
+        }
+      </style>
+  </head>
+  <body>
+    <div id="title"> 회원가입 </div>
+    <br> <br>
+    <div id="name"> 이름 &nbsp; <input type="text"> </div>
+    <br>
+    <div id="id"> 아이디 &nbsp; <input type="text">
+      <input type="button" value="중복확인"> </div>
+    <br>
+    <div id="password"> 비밀번호 &nbsp; <input type="password"> </div>
+    <br>
+    <div id="retype"> 비밀번호 확인 &nbsp; <input type="password"> </div>
+    <br>
+    <div id="email"> 이메일 <input type="text"> </div>
+    <br>
+    <div> 성별 (남/여 중 하나만 선택가능) &nbsp;
+      남 <input type="radio" name="gender"> &nbsp;
+      여 <input type="radio" name="gender"> </div>
+    <br>
+    <span id="mobile"> 휴대폰 (SKT, KT, LGT) </span> &nbsp;
+      <select name="provider" id="">
+        <option value=""> SKT </option>
+        <option value=""> KT </option>
+        <option value=""> LGT </option>
+      </select>
+      <input type="text" placeholder="휴대폰번호 (-제외)">
+      <input type="button" value="인증번호 받기"> <br>
+    <br>
+    <div id="auth"> 인증번호 &nbsp; <input type="text">
+    <input type="button" value="인증번호 확인"> </div>
+    <br> <br> <br>
+    <div id="submit"> <input type="button" value="가입"> &nbsp;
+      <input type="button" value="취소"> </div>
+  </body>
+</html>
