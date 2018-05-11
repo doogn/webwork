@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  </body>
+  <script>
+
+    // 1~100 중 홀수만 출력 (% 사용)
+    for (var i=1; i<101; i++) {
+      if (i % 2 == 1) {
+        console.log(i);
+      }
+    }
+
+    // 1~100 중 홀수만 출력 (% 사용하지 않고 #1)
+    for (var i=1; i<101; i++) {
+      if (i/2 != parseInt(i/2)) {
+        console.log(i);
+      }
+    }
+
+    // 1~100 중 홀수만 출력 (% 사용하지 않고 #2)
+    for (var i=1; i<=100; i+=2) {
+      console.log(i);
+    }
+
+    // 1~100 중 홀수만 출력 (% 사용하지 않고 #3)
+    for (var i=0; i<50; i++) {
+      console.log(i*2+1);
+    }
+
+    // 1~100 중 홀수만 출력 (% 사용하지 않고 #4)
+    var odd = true
+    for (var i=1; i<101; i++) {
+      if (odd == true) {
+        console.log(i);
+        odd = false;
+      } else {
+        odd = true;
+      }
+    }
+
+    // *표 삼각형 출력하기
+    for (var i=1; i<=8; i++) {
+      var out = "";
+      for (var j=1; j<=i*2-1; j++) {
+        out += "*";
+      }
+      console.log(out);
+    }
+
+  </script>
+</html>

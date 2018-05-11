@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="text" id="number1">
+    <input type="text" id="number2">
+    <input type="button" value="결과" id="button">
+  </body>
+
+  <script>
+    var clickButton = document.getElementById('button');
+    clickButton.addEventListener('click', function(){
+      var num1 = document.getElementById('number1').value;
+      var num2 = document.getElementById('number2').value;
+      var sum = Number(num1) + Number(num2);  // String => Number로 형변환 필요
+      //console.log("num1 = " + num1);
+      //console.log("num2 = " + num2);
+      console.log("sum = " + sum);
+      if (sum > 10) {
+        console.log("10보다 큼");
+      } else {
+        console.log("10보다 작거나 같음");
+      }
+    })
+  </script>
+</html>
