@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+  <script>
+    // var cnt = 0;
+    //   for (console.log(1); !console.log(2); console.log(4)) {
+    //     console.log(3);
+    //     cnt++;
+    //     if(cnt==10) break;
+    //   }
+
+
+      var cnt1 = 0;
+      var cnt2;
+
+        for (console.log("1-"+1); !console.log("1-"+2); console.log("1-"+4)) {
+          console.log("1-"+3);
+          cnt1++;
+          if(cnt1 == 5) break;
+          cnt2 = 0;  // cnt2 초기화 필요
+
+          for (console.log("2-"+1); !console.log("2-"+2); console.log("2-"+4)) {
+            console.log("2-"+3);
+            cnt2++;
+            if(cnt2 == 5) break;
+          }
+        }
+
+  </script>
+</html>

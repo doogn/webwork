@@ -43,13 +43,63 @@
       }
     }
 
-    // *표 삼각형 출력하기
+    // *표 삼각형 출력하기 (이증 for문 안쓰고)
+    var out = "*";
+    for (var i=1; i<8; i++) {
+      console.log(out);
+      out += "**";
+    }
+
+    // *표 삼각형 출력하기 (이중 for문 쓰고)
     for (var i=1; i<=8; i++) {
       var out = "";
       for (var j=1; j<=i*2-1; j++) {
         out += "*";
       }
       console.log(out);
+    }
+
+    // *표 역삼각형 출력하기 (이중 for문 사용)
+    for (var i=8; i>=1; i--) {
+      var out = "";
+      for (var j=1; j<=i*2-1; j++) {
+        out += "*";
+      }
+      console.log(out);
+    }
+
+    // ▤로 피라미드 형태 출력하기
+    for (var i=1; i<=8; i++) {
+      var out="";
+        for (var j=1; j<=i+7; j++)
+          if (j <= 8 - i){
+            out += "　";
+          } else {
+            out += "▤";
+        }
+      console.log(out);
+    }
+
+    // ▤로 역피라미드 형태 출력하기
+    for (var i=8; i>=1; i--) {
+      var out="";
+        for (var j=1; j<=i+7; j++)
+          if (j <= (8 - i)){
+            out += "　";
+          } else {
+            out += "▤";
+        }
+      console.log(out);
+    }
+
+    // 프리스타일
+    for (var i=1; i<=50; i++) {
+      var out="";
+        for (var j=1; j<=Math.round((-0.15)*(i*i)+50,0); j++){
+            out += "▤";
+        }
+      console.log(out);
+
     }
 
   </script>
