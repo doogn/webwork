@@ -50,7 +50,7 @@
       out += "**";
     }
 
-    // *표 삼각형 출력하기 (이중 for문 쓰고)
+    // *표 삼각형 출력하기 (이중 for문 사용)
     for (var i=1; i<=8; i++) {
       var out = "";
       for (var j=1; j<=i*2-1; j++) {
@@ -66,6 +66,31 @@
         out += "*";
       }
       console.log(out);
+    }
+
+    // *표 삼각형 출력하기 (이중 for문 사용)
+    for (var i=0; i<7; i++) {
+      var out = "";
+      for (var j=1; j<=Math.pow(2,i); j++) {
+        out += "*";
+      }
+      console.log(out);
+    }
+
+    // *표 삼각형 출력하기 (이중 for문 사용)
+    for (var i=1; i<=64; i=i*2) {
+      var out = "";
+      for (var j=1; j<=i; j++) {
+        out += "*";
+      }
+      console.log(out);
+    }
+
+    // *표 삼각형 출력하기 (이중 for문 안쓰고)
+    var out = "*";
+    for (var i=0; i<7; i++) {
+        console.log(out);
+        out += out;
     }
 
     // ▤로 피라미드 형태 출력하기
@@ -99,8 +124,8 @@
             out += "▤";
         }
       console.log(out);
-
     }
+
 
   </script>
 </html>
