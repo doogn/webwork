@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+  <script>
+
+    // for문을 사용해서 각각의 배열을 구하시오
+    var arr1 = [];
+    for (var i=0; i<100; i++) {
+      arr1[i] = i+1;
+    }
+    console.log(arr1);
+
+    var arr2 = [];
+    for (var i=0; i<51; i++) {
+      arr2[i] = i*2;
+    }
+    console.log(arr2);
+
+    var arr3 = [];
+    for (var i=0; i<7; i++) {
+      arr3[i] = "abc" + (i+1).toString();
+      //arr3[i] = "abc" + (i+1);  -- 문자열 + 숫자 => 문자열로 자동변환되기는 함
+    }
+    console.log(arr3);
+
+    var arr4 = [];
+    for (var i=0; i<9; i++) {
+      arr4[i] = i*3+1;
+    }
+    console.log(arr4);
+
+    var arr5 = [];
+    for (var i=1; i<10; i=i+2) {
+      arr5[i] = i*2;
+    }
+    console.log(arr5);
+
+    var arr6 = [];
+    for (var i=0; i<16; i++) {
+      if (i%2 == 1) {
+        arr6[i] = i*2;
+      } else {
+        arr6[i] = 0;
+      }
+    }
+    console.log(arr6);
+
+  </script>
+
+</html>
