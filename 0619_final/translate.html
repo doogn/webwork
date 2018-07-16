@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    #context {
+      background: #BDFF12
+    }
+    .resultArea {
+      font-size: 28px;
+      color: #993800;
+      background-color: #FFE400;
+      font-weight: bold;
+    }
+    .langArea {
+      font-size: 16px
+      color: #0100FF;
+      background-color: #B2CCFF;
+      font-weight: bold;
+    }
+    #translate {
+      background: #D1B2FF
+    }
+    </style>
+  </head>
+  <body>
+    <select name="" id="context">
+      <option value="0"> 안녕하세요. </option>
+      <option value="1"> 반갑습니다. </option>
+      <option value="2"> 감사합니다. </option>
+      <option value="3"> 미안합니다. </option>
+      <option value="4"> 얼마입니까? </option>
+    </select>
+    <br><br>
+    <span class = "langArea">
+    언어: &nbsp; 영어 <input type="radio" name="lang" checked>
+    일어 <input type="radio" name="lang"> &nbsp; </span> &nbsp;
+    <input type="button" value="번역" id="translate">
+    <br><br>
+    <span class = "resultArea"> 번역결과 </span>
+  </body>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $("#translate").click(function(){
+      var lang;
+      if ($("[name = lang]")[0].checked) {
+        lang = 0;
+      } else if ($("[name = lang]")[1].checked) {
+        lang = 1;
+      }
+
+      $.ajax({
+        url: 'http://localhost/getTranslateResult?context=' + $("#context").val()
+            + '&lang=' + lang,
+        data: "",
+        success: function(response){
+          $(".resultArea").html(response);
+        }
+      });
+    })
+
+  </script>
+</html>

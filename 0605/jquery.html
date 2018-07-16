@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="button" value="추가" id="addButton1">
+    <div id="div1"></div>
+    <input type="button" value="추가" id="addButton2">
+    <div id="div2"></div>
+  </body>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    // 자바스크립트로
+    document.getElementById("addButton1").addEventListener("click", function(){
+      document.getElementById("div1").innerHTML += "a";
+    });
+    // 제이쿼리로
+    $("#addButton2").click(function(){
+      $("#div2").append("a");
+    });
+  </script>
+
+</html>

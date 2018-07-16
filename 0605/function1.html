@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+  <script>
+    var hello = function() {
+      console.log("Hello");
+    }
+    hello();
+
+    function hello2() {
+      console.log("Hello2");
+    }
+    hello2();
+
+    function hello3(a) {
+      console.log("Hello3");
+      console.log(a);
+    }
+    hello3();
+
+    var hello4 = function(a, b) {
+      console.log(a);
+      console.log(b);
+      return a+b;
+      console.log("after return => no exec");
+      // 함수 내 return문 뒤의 코드는 실행하지 않음
+    }
+    var result;
+    result = hello4(20, 10);
+    console.log(result);
+
+    // 실습 예제
+    // 두 숫자를 받아서 연산하는 함수 만들기
+
+    var add = function(a,b) {
+      return (a+b);
+    }
+
+    var sub = function(a,b) {
+      return (a-b);
+    }
+
+    var mul = function(a,b) {
+      return (a*b);
+    }
+
+    var div = function(a,b) {
+      return (a/b);
+    }
+
+    var pow = function(a,b) {
+      return (a**b);
+    }
+
+    var a = 10;
+    var b = 5;
+    console.log(a + " + " + b + " = " + add(a,b));
+    console.log(a + " - " + b + " = " + sub(a,b));
+    console.log(a + " * " + b + " = " + mul(a,b));
+    console.log(a + " / " + b + " = " + div(a,b));
+    console.log(a + " ^ " + b + " = " + pow(a,b));
+
+  </script>
+</html>

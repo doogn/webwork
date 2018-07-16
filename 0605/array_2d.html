@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+  <script>
+
+    // 2차원 배열
+    var array2D = [];
+    array2D[0] = [];
+    array2D[1] = [];
+    array2D[2] = [];
+    array2D[3] = 100;
+    array2D[0][0] = 10;
+    array2D[0][1] = 20;
+    array2D[1][0] = 30;
+    array2D[1][1] = 40;
+    array2D[1][2] = 50;
+    console.log(array2D);
+
+    // 2차원 배열 + for문 (1)
+    var arr1 = [];
+    for (var i=0; i<5; i++) {
+      arr1[i] = [];
+      for (var j=0; j<5; j++) {
+        arr1[i][j] = (5*i)+(j+1);
+      }
+    }
+    console.log(arr1);
+
+    // 2차원 배열 + for문 (1')
+    var arr1 = [];
+    var count = 1;
+    for (var i=0; i<5; i++) {
+      arr1[i] = [];
+      for (var j=0; j<5; j++) {
+        arr1[i][j] = count;
+        count += 1;
+      }
+    }
+    console.log(arr1);
+
+    // 2차원 배열 + for문 (2)
+    var arr2 = [];
+    for (var i=0; i<5; i++) {
+      arr2[i] = [];
+      for (var j=0; j<5; j++) {
+        arr2[i][j] = (15*i)+(3*j+1);
+      }
+    }
+    console.log(arr2);
+
+    // 2차원 배열 + for문 (2')
+    var arr2 = [];
+    var count = 1;
+    for (var i=0; i<5; i++) {
+      arr2[i] = [];
+      for (var j=0; j<5; j++) {
+        arr2[i][j] = count;
+        count += 3;
+      }
+    }
+    console.log(arr2);
+
+    // 2차원 배열 + for문 (3)
+    var arr3 = [];
+    for (var i=0; i<5; i++) {
+      arr3[i] = [];
+      for (var j=0; j<5; j++) {
+        arr3[i][j] = i*j;
+      }
+    }
+    console.log(arr3);
+
+    // 2차원 배열 + for문 (4)
+    var arr4 = [];
+    for (var i=0; i<5; i++) {
+      arr4[i] = [];
+      for (var j=0; j<5; j++) {
+        arr4[i][j] = i.toString() + j.toString();
+        // 또는, arr4[i][j] = "" + i + j;
+      }
+    }
+    console.log(arr4);
+
+    // 3차원 배열 + for문
+    var arr_3d = [];
+    for (var i=0; i<5; i++) {
+      arr_3d[i] = [];
+      for (var j=0; j<5; j++) {
+        arr_3d[i][j] = [];
+        for (var k=0; k<5; k++) {
+          arr_3d[i][j][k] = i*j*k;
+        }
+      }
+    }
+    console.log(arr_3d);
+
+  </script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+  <script>
+    // 문자열 객체 => 배열처럼 인덱스번호로 접근 가능
+    console.log('문자열 객체 => 배열처럼 인덱스번호로 접근 가능')
+    var str = 'abcdefg';
+    for (var i=0; i<str.length; i++) {
+      console.log(str[i]);
+    }
+
+    // 369게임
+    console.log('')
+    console.log('< 3.6.9 게임 >')
+    for (var i=0; i<150; i++) {
+      var str = (i+1).toString();
+      for (var j=0; j<str.length; j++) {
+        if (str[j] == '3' || str[j] == '6' || str[j] == '9') {
+          var str = '짝';
+        }
+      }
+      console.log(str);
+    }
+
+    // 369게임 #2
+    console.log('')
+    console.log('< 3.6.9 게임 #2> - 다른 Rule 적용')
+    for (var i=1; i<=150; i++) {
+      var str = i.toString();
+      console.log(str);
+      for (var j=0; j<str.length; j++) {
+        if (str[j] == '3' || str[j] == '6' || str[j] == '9') {
+          console.log('짝');
+        }
+      }
+    }
+
+    // 369게임 #3
+    console.log('')
+    console.log('< 3.6.9 게임 #3> - 다른 Rule 적용')
+    for (var i=1; i<=150; i++) {
+      var str = i.toString();
+      console.log(str);
+      var count = 0;
+      for (var j=0; j<str.length; j++) {
+        if (str[j] == '3' || str[j] == '6' || str[j] == '9') {
+        count += 1;
+        console.log('=> '+ i + ' 대신 ☜짝!☞ ' + count + '번');
+        }
+      }
+    }
+
+
+  </script>
+</html>
